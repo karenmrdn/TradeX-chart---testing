@@ -20,6 +20,12 @@ h2 {
 .test {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.loading {
+  color: white;
+  font-size: 5rem;
 }
 
 

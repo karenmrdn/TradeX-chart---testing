@@ -27258,8 +27258,16 @@ function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; 
 
 var chart = document.createElement("tradex-chart");
 var app = document.getElementById("app");
-app.appendChild(chart);
-chart.start(_d2tConfig.default);
+var newDiv = document.createElement("div");
+newDiv.classList.add("loading");
+var newContent = document.createTextNode("Loading...");
+newDiv.appendChild(newContent);
+app.appendChild(newDiv);
+setTimeout(function () {
+  newDiv.remove();
+  app.appendChild(chart);
+  chart.start(_config.default);
+}, 3000);
 window.chart = chart;
 },{"./styles.css":"src/styles.css","tradex-chart":"node_modules/tradex-chart/dist/tradex-chart.es.js","./config":"src/config.js","./d2tConfig":"src/d2tConfig.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -27286,7 +27294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58351" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57008" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
