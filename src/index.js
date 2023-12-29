@@ -10,7 +10,7 @@ const app = document.getElementById("app");
 
 const newDiv = document.createElement("div");
 newDiv.classList.add("loading");
-const newContent = document.createTextNode("Loading...");
+const newContent = document.createTextNode("Loading data...");
 newDiv.appendChild(newContent);
 app.appendChild(newDiv);
 

@@ -17,13 +17,15 @@ h2 {
   margin-bottom: 2em;
 }
 
-.test {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
+.test-content {
+  color: #ccc;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 .loading {
   color: white;
+  border: 1px solid white;
   font-size: 5rem;
+  margin-bottom: 3rem;
 }

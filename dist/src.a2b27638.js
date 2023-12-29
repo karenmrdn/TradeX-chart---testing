@@ -27260,7 +27260,7 @@ var chart = document.createElement("tradex-chart");
 var app = document.getElementById("app");
 var newDiv = document.createElement("div");
 newDiv.classList.add("loading");
-var newContent = document.createTextNode("Loading...");
+var newContent = document.createTextNode("Loading data...");
 newDiv.appendChild(newContent);
 app.appendChild(newDiv);
 setTimeout(function () {
@@ -27294,7 +27294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57008" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60236" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
